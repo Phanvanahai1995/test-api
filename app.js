@@ -2,8 +2,6 @@ const express = require("express");
 
 const app = express();
 
-app.use(express.json());
-
 const data = {
   data: {
     board: {
@@ -218,6 +216,8 @@ const data = {
     },
   },
 };
+
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json(data);
